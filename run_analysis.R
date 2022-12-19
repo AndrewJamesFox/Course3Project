@@ -18,19 +18,19 @@ if (!file.exists("HAR UCI Dataset")){
 
 #Read in features
 features <- read.table("./data/UCI HAR Dataset/features.txt")[,2]
-features
+str(features)
 
 #Train Data
-train_subjects <- read.table("./data/UCI HAR Dataset/train/y_train.txt", col.names=c("subject"))
+train_subjects <- read.table("./data/UCI HAR Dataset/train/subject_train.txt", col.names=c("subject"))
 train_x <- read.table("./data/UCI HAR Dataset/train/X_train.txt", col.names=features)
-train_activity <- read.table("./data/UCI HAR Dataset/train/subject_train.txt", col.names=c("activity"))
+train_activity <- read.table("./data/UCI HAR Dataset/train/y_train.txt", col.names=c("activity"))
 train <- cbind(train_subjects, train_x, train_activity)
 str(train)
 
 #Test Data
-test_subjects <- read.table("./data/UCI HAR Dataset/test/y_test.txt", col.names=c("subject"))
+test_subjects <- read.table("./data/UCI HAR Dataset/test/subject_test.txt", col.names=c("subject"))
 test_x <- read.table("./data/UCI HAR Dataset/test/X_test.txt", col.names=features)
-test_activity <- read.table("./data/UCI HAR Dataset/test/subject_test.txt", col.names=c("activity"))
+test_activity <- read.table("./data/UCI HAR Dataset/test/y_test.txt", col.names=c("activity"))
 test <- cbind(test_subjects, test_x, test_activity)
 str(test)
 

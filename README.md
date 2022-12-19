@@ -4,7 +4,9 @@ editor_options:
     wrap: 72
 ---
 
-Andrew Fox Coursera for Johns Hopkins Universtiy
+Andrew Fox
+
+Coursera for Johns Hopkins Universtiy
 
 Data Science Course - Getting and Cleaning Data Project
 
